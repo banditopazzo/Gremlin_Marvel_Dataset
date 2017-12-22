@@ -1,5 +1,16 @@
-# Compiled class file
-*.class
+# IntelliJ project
+.idea
+
+# Target folder
+target
+
+# Extracted files
+src/main/resources/nodes.csv
+src/main/resources/edges.csv
+src/main/resources/hero-network.csv
+
+#Exported Graph
+src/main/resources/marvel.graphml
 
 # Log file
 *.log
@@ -19,10 +30,3 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
-
-.idea
-target
-src/main/resources/nodes.csv
-src/main/resources/edges.csv
-src/main/resources/hero-network.csv
-src/main/resources/marvel.graphml
