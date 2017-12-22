@@ -2,7 +2,7 @@
 
 ## The Application
 
-Simple Java application that performs the following operation on the Marvel Dataset (CSV format):
+Simple Gremlin Java application that performs the following operation on the Marvel Dataset (CSV format):
 
 * Unzip the files
 * Create a TinkerGraph in-memory database
