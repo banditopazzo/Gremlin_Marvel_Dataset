@@ -1,5 +1,6 @@
 # IntelliJ project
 .idea
+*.iml
 
 # Target folder
 target
