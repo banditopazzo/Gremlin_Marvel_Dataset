@@ -5,7 +5,7 @@ import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversalSo
 import org.apache.tinkerpop.gremlin.structure.Graph;
 import org.apache.tinkerpop.gremlin.structure.T;
 import org.apache.tinkerpop.gremlin.structure.Vertex;
-import org.apache.tinkerpop.gremlin.structure.io.graphml.GraphMLWriter;
+import org.apache.tinkerpop.gremlin.structure.io.graphson.GraphSONWriter;
 import org.apache.tinkerpop.gremlin.tinkergraph.structure.TinkerGraph;
 
 import java.io.File;
@@ -30,7 +30,7 @@ public class App {
         final String NODES = Paths.get(resourcesDirectory, "nodes.csv").toString();
         final String EDGES = Paths.get(resourcesDirectory, "edges.csv").toString();
         final String NETWORK = Paths.get(resourcesDirectory, "hero-network.csv").toString();
-        final String OUTPUT = Paths.get(resourcesDirectory, "marvel.graphml").toString();
+        final String OUTPUT = Paths.get(resourcesDirectory, "marvel.graphson").toString();
 
         //Unzip files
         System.out.print("Unzipping files...");
@@ -209,13 +209,14 @@ public class App {
     }
 
     private static void writeGraph(Graph graph, String filepath) {
-        GraphMLWriter writer = GraphMLWriter.build().normalize(true).create();
+        GraphSONWriter writer = GraphSONWriter.build().create();
         System.out.println();
         System.out.print("Writing graph...");
         try {
             writer.writeGraph(
                     new FileOutputStream(filepath),
-                    graph);
+                    graph
+            );
 
         } catch (Exception e) {
             e.printStackTrace();

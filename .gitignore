@@ -11,7 +11,7 @@ src/main/resources/edges.csv
 src/main/resources/hero-network.csv
 
 #Exported Graph
-src/main/resources/marvel.graphml
+src/main/resources/marvel.graphson
 
 # Log file
 *.log

@@ -9,7 +9,7 @@ Simple Gremlin Java application that performs the following operation on the Mar
 * Load the vertices: Heroes and Comics
 * Load the edges connecting Heroes to Comics
 * Load the social network between the Heroes
-* Save the graph to a GraphML file
+* Save the graph to a GraphSON file
 
 ## The Dataset
 
